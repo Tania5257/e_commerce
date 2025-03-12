@@ -1,4 +1,4 @@
-import 'package:e_commerce/utils/constants/colors.dart';
+import 'package:ecommerce/common/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
@@ -8,24 +8,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Mega Shop",
-            style: TextStyle(
-              fontFamily: "DMSans",
-              fontWeight: FontWeight.w700,
-              color: FColors.oceanBlue,
-            )),
-        centerTitle: true,
-        actions: [
-          Container(
-            padding: EdgeInsets.fromLTRB(10, 10, 5, 10),
-            child: Icon(Iconsax.notification_bing_outline),
-          ),
-          Container(
-            padding: EdgeInsets.fromLTRB(5, 10, 10, 10),
-            child: Icon(IonIcons.cart),
-          ),
-        ],
+      appBar: const FAppBar(
+        leading: BackButton(),
+        title: "Mega Shop",
+        firstIcon: Iconsax.notification_bing_outline,
+        secendIcon: IonIcons.cart,
       ),
     );
   }
