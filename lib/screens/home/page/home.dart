@@ -14,6 +14,34 @@ class Home extends StatelessWidget {
         firstIcon: Iconsax.notification_bing_outline,
         secendIcon: IonIcons.cart,
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Iconsax.home_outline,
+            ),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Iconsax.heart_outline,
+            ),
+            label: "Wishlist",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Iconsax.shopping_bag_outline,
+            ),
+            label: "Cart", // Added label
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Iconsax.user,
+            ),
+            label: "Profile", // Added label and icon
+          ),
+        ],
+      ),
     );
   }
 }
